@@ -441,9 +441,9 @@ export default function Portfolio() {
             lineHeight: 1.05, letterSpacing: "-0.04em", marginBottom: "1.25rem",
             animation: heroInView ? "fadeUp 0.7s 0.1s ease both" : "none",
           }}>
-            Senior Full-Stack<br />
-            <span style={{ background: "linear-gradient(135deg, #00FFB2 0%, #38BDF8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              Engineer
+            Hi, I'm Ritesh<br />
+            <span style={{ background: "linear-gradient(135deg, #00FFB2 0%, #38BDF8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", fontSize: isMobile ? "1.5rem" : "1.8rem", letterSpacing: "0.02em" }}>
+              A Senior Ruby on Rails developer
             </span>
           </h1>
 
@@ -477,7 +477,7 @@ export default function Portfolio() {
             marginTop: "3rem", flexWrap: "wrap",
             animation: heroInView ? "fadeUp 0.7s 0.4s ease both" : "none",
           }}>
-            {[["5+", "Years Experience"], ["20+", "Projects Shipped"], ["Rails · React", "Core Stack"]].map(([val, label]) => (
+            {[["5+", "Years Experience"], ["4+", "Projects Shipped"], ["Rails · React", "Core Stack"]].map(([val, label]) => (
               <div key={label}>
                 <div style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 700, fontSize: "1.4rem", color: "#F1F5F9", letterSpacing: "-0.03em" }}>{val}</div>
                 <div style={{ fontFamily: "'Poppins', sans-serif", fontSize: "0.68rem", color: "#475569", letterSpacing: "0.06em", marginTop: "0.2rem" }}>{label}</div>
@@ -635,10 +635,10 @@ export default function Portfolio() {
         maxWidth: "1200px", margin: "0 auto",
         position: "relative", zIndex: 1,
       }}>
-        <span style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 700, color: "#1E293B" }}>
+        <span style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 700, color: "rgb(30, 119, 59)" }}>
           <span style={{ color: "#00FFB230" }}>&lt;</span>dev<span style={{ color: "#00FFB230" }}>/&gt;</span>
         </span>
-        <span style={{ fontFamily: "'Poppins', sans-serif", fontSize: "0.68rem", color: "#1E293B", letterSpacing: "0.05em" }}>
+        <span style={{ fontFamily: "'Poppins', sans-serif", fontSize: "0.68rem", color: "rgb(30, 119, 59)", letterSpacing: "0.05em" }}>
           © 2026 · Design by Ritesh
         </span>
       </footer>
