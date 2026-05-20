@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ritesh Chaudhary — CV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Poppins', sans-serif;
@@ -31,7 +37,9 @@
       border-bottom: 2px solid #0F172A;
       margin-bottom: 24px;
     }
+
     .header-left {}
+
     .name {
       font-size: 26pt;
       font-weight: 800;
@@ -40,6 +48,7 @@
       line-height: 1;
       margin-bottom: 5px;
     }
+
     .title {
       font-size: 10.5pt;
       font-weight: 500;
@@ -47,11 +56,13 @@
       letter-spacing: 0.04em;
       margin-bottom: 2px;
     }
+
     .tagline {
       font-size: 8pt;
       color: #64748B;
       font-weight: 400;
     }
+
     .header-right {
       text-align: right;
       display: flex;
@@ -59,6 +70,7 @@
       gap: 4px;
       margin-top: 4px;
     }
+
     .contact-item {
       font-size: 8pt;
       color: #475569;
@@ -67,10 +79,12 @@
       gap: 5px;
       justify-content: flex-end;
     }
+
     .contact-item a {
       color: #475569;
       text-decoration: none;
     }
+
     .dot {
       width: 5px;
       height: 5px;
@@ -88,7 +102,10 @@
     }
 
     /* ── SECTION ── */
-    .section { margin-bottom: 22px; }
+    .section {
+      margin-bottom: 22px;
+    }
+
     .section-label {
       font-size: 6.5pt;
       font-weight: 700;
@@ -100,6 +117,7 @@
       align-items: center;
       gap: 8px;
     }
+
     .section-label::after {
       content: '';
       flex: 1;
@@ -108,40 +126,49 @@
     }
 
     /* ── EXPERIENCE ── */
-    .exp-item { margin-bottom: 16px; }
+    .exp-item {
+      margin-bottom: 16px;
+    }
+
     .exp-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       margin-bottom: 2px;
     }
+
     .exp-company {
       font-size: 10pt;
       font-weight: 700;
       color: #0F172A;
     }
+
     .exp-period {
       font-size: 7.5pt;
       color: #94A3B8;
       font-weight: 400;
       white-space: nowrap;
     }
+
     .exp-role {
       font-size: 8.5pt;
       font-weight: 500;
       color: #059669;
       margin-bottom: 5px;
     }
+
     .exp-projects {
       list-style: none;
       padding: 0;
     }
+
     .exp-projects li {
       font-size: 8.5pt;
       color: #475569;
       padding: 2px 0 2px 14px;
       position: relative;
     }
+
     .exp-projects li::before {
       content: '▸';
       position: absolute;
@@ -150,35 +177,57 @@
       font-size: 8pt;
       line-height: 1.6;
     }
+
     .exp-projects li strong {
       color: #1E293B;
       font-weight: 600;
     }
 
     /* ── SIDEBAR ── */
-    .sidebar .section { margin-bottom: 20px; }
+    .sidebar .section {
+      margin-bottom: 20px;
+    }
 
-    .skill-item { margin-bottom: 9px; }
+    .skill-item {
+      margin-bottom: 9px;
+    }
+
     .skill-name-row {
       display: flex;
       justify-content: space-between;
       margin-bottom: 3px;
     }
-    .skill-name { font-size: 8pt; color: #334155; font-weight: 500; }
-    .skill-pct  { font-size: 7.5pt; color: #94A3B8; }
+
+    .skill-name {
+      font-size: 8pt;
+      color: #334155;
+      font-weight: 500;
+    }
+
+    .skill-pct {
+      font-size: 7.5pt;
+      color: #94A3B8;
+    }
+
     .skill-bar-bg {
       height: 3px;
       background: #E2E8F0;
       border-radius: 2px;
       overflow: hidden;
     }
+
     .skill-bar-fill {
       height: 100%;
       background: linear-gradient(90deg, #059669, #0EA5E9);
       border-radius: 2px;
     }
 
-    .tag-list { display: flex; flex-wrap: wrap; gap: 5px; }
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
     .tag {
       font-size: 7pt;
       background: #F1F5F9;
@@ -189,13 +238,38 @@
       font-weight: 500;
     }
 
-    .edu-degree { font-size: 8.5pt; font-weight: 700; color: #0F172A; }
-    .edu-school { font-size: 8pt; color: #475569; margin-top: 1px; }
-    .edu-location { font-size: 7.5pt; color: #94A3B8; }
+    .edu-degree {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #0F172A;
+    }
 
-    .service-item { margin-bottom: 7px; }
-    .service-name { font-size: 8.5pt; font-weight: 600; color: #0F172A; }
-    .service-desc { font-size: 7.5pt; color: #64748B; margin-top: 1px; }
+    .edu-school {
+      font-size: 8pt;
+      color: #475569;
+      margin-top: 1px;
+    }
+
+    .edu-location {
+      font-size: 7.5pt;
+      color: #94A3B8;
+    }
+
+    .service-item {
+      margin-bottom: 7px;
+    }
+
+    .service-name {
+      font-size: 8.5pt;
+      font-weight: 600;
+      color: #0F172A;
+    }
+
+    .service-desc {
+      font-size: 7.5pt;
+      color: #64748B;
+      margin-top: 1px;
+    }
 
     .available-badge {
       display: inline-flex;
@@ -207,250 +281,291 @@
       padding: 4px 10px;
       margin-bottom: 6px;
     }
+
     .available-dot {
-      width: 6px; height: 6px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: #059669;
     }
-    .available-text { font-size: 7pt; color: #059669; font-weight: 600; letter-spacing: 0.06em; }
+
+    .available-text {
+      font-size: 7pt;
+      color: #059669;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
   </style>
 </head>
+
 <body>
-<div class="page">
+  <div class="page">
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="header-left">
-      <div class="available-badge">
-        <span class="available-dot"></span>
-        <span class="available-text">AVAILABLE FOR WORK</span>
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-left">
+        <div class="available-badge">
+          <span class="available-dot"></span>
+          <span class="available-text">AVAILABLE FOR WORK</span>
+        </div>
+        <div class="name">Ritesh Chaudhary</div>
+        <div class="title">Senior Ruby on Rails Developer</div>
+        <div class="tagline">5+ years · Full-Stack · AI Integrations · React · PostgreSQL</div>
       </div>
-      <div class="name">Ritesh Chaudhary</div>
-      <div class="title">Senior Ruby on Rails Developer</div>
-      <div class="tagline">5+ years · Full-Stack · AI Integrations · React · PostgreSQL</div>
+      <div class="header-right">
+        <div class="contact-item">
+          <span class="dot"></span>
+          <a href="mailto:chaudharyritesh7100@gmail.com">chaudharyritesh7100@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="dot"></span>
+          <a href="https://github.com/Riteshchaudhary710" target="_blank">github.com/Riteshchaudhary710</a>
+        </div>
+        <div class="contact-item">
+          <span class="dot"></span>
+          <a href="https://www.linkedin.com/in/ritesh-chaudhary-a77804190/"
+            target="_blank">linkedin.com/in/ritesh-chaudhary-a77804190</a>
+        </div>
+      </div>
     </div>
-    <div class="header-right">
-      <div class="contact-item">
-        <span class="dot"></span>
-        <a href="mailto:chaudharyritesh7100@gmail.com">chaudharyritesh7100@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        <span class="dot"></span>
-        <a href="https://github.com/Riteshchaudhary710" target="_blank">github.com/Riteshchaudhary710</a>
-      </div>
-      <div class="contact-item">
-        <span class="dot"></span>
-        <a href="https://www.linkedin.com/in/ritesh-chaudhary-a77804190/" target="_blank">linkedin.com/in/ritesh-chaudhary-a77804190</a>
-      </div>
-    </div>
+
+    <!-- BODY -->
+    <div class="body">
+
+      <!-- LEFT: EXPERIENCE + PROJECTS -->
+      <div class="main">
+
+        <!-- PROFESSIONAL SUMMARY -->
+        <div class="section">
+          <div class="section-label">Professional Summary</div>
+          <p style="font-size:8.5pt; color:#475569; line-height:1.7;">
+            Results-driven Senior Ruby on Rails developer with 5+ years of experience building scalable,
+            production-grade web applications. Proficient in full-stack development using Rails, React, and
+            PostgreSQL, with hands-on experience integrating AI/GenAI solutions, designing RESTful APIs,
+            and leading end-to-end product delivery. Passionate about clean architecture, performance,
+            and mentoring fellow developers.
+          </p>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div class="section">
+          <div class="section-label">Work Experience</div>
+
+          <!-- Danphe Software Labs -->
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-company">Danphe Software Labs</span>
+              <span class="exp-period">Previous Role</span>
+            </div>
+            <div class="exp-role">Ruby on Rails Developer</div>
+            <ul class="exp-projects">
+              <li><strong>HR Management System</strong> — Built a comprehensive HR platform handling employee records,
+                payroll, leave management, and reporting with role-based access control.</li>
+              <li><strong>RecognizeApp</strong> — Developed employee recognition and engagement platform with real-time
+                notifications, peer-to-peer kudos, and leaderboard features.</li>
+            </ul>
+          </div>
+
+          <!-- TechRecognize -->
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-company">TechRecognize</span>
+              <span class="exp-period">Previous Role</span>
+            </div>
+            <div class="exp-role">Full-Stack Developer</div>
+            <ul class="exp-projects">
+              <li><strong>Web Design &amp; Development</strong> — Designed and built responsive, SEO-optimised websites
+                including <em>Infusiontrip</em>, <em>AdelaideBudgetCars</em>, and <em>HRintent</em>.</li>
+              <li><strong>Job Portal Web Application</strong> — End-to-end Rails + React job platform with candidate
+                profiles, employer dashboards, smart search, and application tracking.</li>
+              <li><strong>Delivery App</strong> — Built a logistics and delivery management application with real-time
+                order tracking, driver assignment, and admin analytics.</li>
+            </ul>
+          </div>
+
+          <!-- Bajra Technologies -->
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-company">Bajra Technologies LLC</span>
+              <span class="exp-period">Previous Role</span>
+            </div>
+            <div class="exp-role">Ruby on Rails Developer</div>
+            <ul class="exp-projects">
+              <li><strong>Smart Sorting</strong> — Developed an intelligent sorting and classification system,
+                integrating algorithmic logic with a clean Rails API and responsive frontend.</li>
+            </ul>
+          </div>
+
+          <!-- Splendour Group -->
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-company">Splendour Group</span>
+              <span class="exp-period">Previous Role</span>
+            </div>
+            <div class="exp-role">WordPress Developer &amp; Web Designer</div>
+            <ul class="exp-projects">
+              <li><strong>Web Design</strong> — Created modern UI/UX designs and responsive layouts tailored to client
+                branding requirements.</li>
+              <li><strong>WordPress Development</strong> — Built and customised WordPress themes and plugins for
+                corporate websites with performance optimisations.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SERVICES -->
+        <div class="section">
+          <div class="section-label">Services Offered</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px 16px;">
+            <div class="service-item">
+              <div class="service-name">Custom Website Development</div>
+              <div class="service-desc">Pixel-perfect, brand-tailored websites</div>
+            </div>
+            <div class="service-item">
+              <div class="service-name">Web Application Development</div>
+              <div class="service-desc">Scalable Rails + React full-stack apps</div>
+            </div>
+            <div class="service-item">
+              <div class="service-name">AI Integration &amp; Automation</div>
+              <div class="service-desc">GenAI features, LLM-powered workflows</div>
+            </div>
+            <div class="service-item">
+              <div class="service-name">QA &amp; Testing</div>
+              <div class="service-desc">Unit, integration &amp; end-to-end coverage</div>
+            </div>
+            <div class="service-item">
+              <div class="service-name">Feature Enhancement &amp; Maintenance</div>
+              <div class="service-desc">Evolve and maintain existing codebases</div>
+            </div>
+            <div class="service-item">
+              <div class="service-name">IT Consulting &amp; Mentorship</div>
+              <div class="service-desc">Architecture guidance &amp; developer coaching</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /main -->
+
+      <!-- RIGHT SIDEBAR -->
+      <div class="sidebar">
+
+        <!-- SKILLS -->
+        <div class="section">
+          <div class="section-label">Skills</div>
+
+          <div class="skill-item">
+            <div class="skill-name-row"><span class="skill-name">Ruby on Rails</span><span class="skill-pct">95%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width:95%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name-row"><span class="skill-name">REST APIs</span><span class="skill-pct">92%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width:92%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name-row"><span class="skill-name">React.js</span><span class="skill-pct">88%</span></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width:88%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name-row"><span class="skill-name">JS / HTML5 / CSS3</span><span
+                class="skill-pct">90%</span></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width:90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name-row"><span class="skill-name">PostgreSQL / MySQL</span><span
+                class="skill-pct">85%</span></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width:85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name-row"><span class="skill-name">AI / GenAI Integrations</span><span
+                class="skill-pct">80%</span></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width:80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name-row"><span class="skill-name">WordPress</span><span class="skill-pct">78%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width:78%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name-row"><span class="skill-name">Docker</span><span class="skill-pct">72%</span></div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width:72%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TECH STACK -->
+        <div class="section">
+          <div class="section-label">Tech Stack</div>
+          <div class="tag-list">
+            <span class="tag">Ruby on Rails</span>
+            <span class="tag">React.js</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Git &amp; GitHub</span>
+            <span class="tag">Docker</span>
+            <span class="tag">WordPress</span>
+            <span class="tag">GenAI / LLMs</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Python</span>
+            <span class="tag">OpenAI API</span>
+          </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="section">
+          <div class="section-label">Education</div>
+          <div>
+            <div class="edu-degree">Bachelor of Engineering</div>
+            <div class="edu-degree" style="font-weight:500; font-size:8pt;">Computer Engineering</div>
+            <div class="edu-school">Kantipur Engineering College</div>
+            <div class="edu-location">Dhapkhel, Lalitpur, Nepal</div>
+          </div>
+        </div>
+
+        <!-- KEY PROJECTS -->
+        <div class="section">
+          <div class="section-label">Key Projects</div>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div class="service-item">
+              <div class="service-name">AI-Powered Job Portal</div>
+              <div class="service-desc">Rails + React · GenAI resume parsing · smart matching</div>
+            </div>
+            <div class="service-item">
+              <div class="service-name">SaaS Admin Dashboard</div>
+              <div class="service-desc">Multi-tenant · RBAC · real-time reporting</div>
+            </div>
+            <div class="service-item">
+              <div class="service-name">E-Commerce Platform</div>
+              <div class="service-desc">WordPress · WooCommerce · payment gateway</div>
+            </div>
+            <div class="service-item">
+              <div class="service-name">GenAI Automation Suite</div>
+              <div class="service-desc">LLM APIs · content workflows · data extraction</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /sidebar -->
+    </div><!-- /body -->
   </div>
-
-  <!-- BODY -->
-  <div class="body">
-
-    <!-- LEFT: EXPERIENCE + PROJECTS -->
-    <div class="main">
-
-      <!-- PROFESSIONAL SUMMARY -->
-      <div class="section">
-        <div class="section-label">Professional Summary</div>
-        <p style="font-size:8.5pt; color:#475569; line-height:1.7;">
-          Results-driven Senior Ruby on Rails developer with 5+ years of experience building scalable, 
-          production-grade web applications. Proficient in full-stack development using Rails, React, and 
-          PostgreSQL, with hands-on experience integrating AI/GenAI solutions, designing RESTful APIs, 
-          and leading end-to-end product delivery. Passionate about clean architecture, performance, 
-          and mentoring fellow developers.
-        </p>
-      </div>
-
-      <!-- EXPERIENCE -->
-      <div class="section">
-        <div class="section-label">Work Experience</div>
-
-        <!-- Danphe Software Labs -->
-        <div class="exp-item">
-          <div class="exp-header">
-            <span class="exp-company">Danphe Software Labs</span>
-            <span class="exp-period">Previous Role</span>
-          </div>
-          <div class="exp-role">Ruby on Rails Developer</div>
-          <ul class="exp-projects">
-            <li><strong>HR Management System</strong> — Built a comprehensive HR platform handling employee records, payroll, leave management, and reporting with role-based access control.</li>
-            <li><strong>RecognizeApp</strong> — Developed employee recognition and engagement platform with real-time notifications, peer-to-peer kudos, and leaderboard features.</li>
-          </ul>
-        </div>
-
-        <!-- TechRecognize -->
-        <div class="exp-item">
-          <div class="exp-header">
-            <span class="exp-company">TechRecognize</span>
-            <span class="exp-period">Previous Role</span>
-          </div>
-          <div class="exp-role">Full-Stack Developer</div>
-          <ul class="exp-projects">
-            <li><strong>Web Design &amp; Development</strong> — Designed and built responsive, SEO-optimised websites including <em>Infusiontrip</em>, <em>AdelaideBudgetCars</em>, and <em>HRintent</em>.</li>
-            <li><strong>Job Portal Web Application</strong> — End-to-end Rails + React job platform with candidate profiles, employer dashboards, smart search, and application tracking.</li>
-            <li><strong>Delivery App</strong> — Built a logistics and delivery management application with real-time order tracking, driver assignment, and admin analytics.</li>
-          </ul>
-        </div>
-
-        <!-- Bajra Technologies -->
-        <div class="exp-item">
-          <div class="exp-header">
-            <span class="exp-company">Bajra Technologies LLC</span>
-            <span class="exp-period">Previous Role</span>
-          </div>
-          <div class="exp-role">Ruby on Rails Developer</div>
-          <ul class="exp-projects">
-            <li><strong>Smart Sorting</strong> — Developed an intelligent sorting and classification system, integrating algorithmic logic with a clean Rails API and responsive frontend.</li>
-          </ul>
-        </div>
-
-        <!-- Splendour Group -->
-        <div class="exp-item">
-          <div class="exp-header">
-            <span class="exp-company">Splendour Group</span>
-            <span class="exp-period">Previous Role</span>
-          </div>
-          <div class="exp-role">WordPress Developer &amp; Web Designer</div>
-          <ul class="exp-projects">
-            <li><strong>Web Design</strong> — Created modern UI/UX designs and responsive layouts tailored to client branding requirements.</li>
-            <li><strong>WordPress Development</strong> — Built and customised WordPress themes and plugins for corporate websites with performance optimisations.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- SERVICES -->
-      <div class="section">
-        <div class="section-label">Services Offered</div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px 16px;">
-          <div class="service-item">
-            <div class="service-name">Custom Website Development</div>
-            <div class="service-desc">Pixel-perfect, brand-tailored websites</div>
-          </div>
-          <div class="service-item">
-            <div class="service-name">Web Application Development</div>
-            <div class="service-desc">Scalable Rails + React full-stack apps</div>
-          </div>
-          <div class="service-item">
-            <div class="service-name">AI Integration &amp; Automation</div>
-            <div class="service-desc">GenAI features, LLM-powered workflows</div>
-          </div>
-          <div class="service-item">
-            <div class="service-name">QA &amp; Testing</div>
-            <div class="service-desc">Unit, integration &amp; end-to-end coverage</div>
-          </div>
-          <div class="service-item">
-            <div class="service-name">Feature Enhancement &amp; Maintenance</div>
-            <div class="service-desc">Evolve and maintain existing codebases</div>
-          </div>
-          <div class="service-item">
-            <div class="service-name">IT Consulting &amp; Mentorship</div>
-            <div class="service-desc">Architecture guidance &amp; developer coaching</div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- /main -->
-
-    <!-- RIGHT SIDEBAR -->
-    <div class="sidebar">
-
-      <!-- SKILLS -->
-      <div class="section">
-        <div class="section-label">Skills</div>
-
-        <div class="skill-item">
-          <div class="skill-name-row"><span class="skill-name">Ruby on Rails</span><span class="skill-pct">95%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:95%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name-row"><span class="skill-name">REST APIs</span><span class="skill-pct">92%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:92%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name-row"><span class="skill-name">React.js</span><span class="skill-pct">88%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:88%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name-row"><span class="skill-name">JS / HTML5 / CSS3</span><span class="skill-pct">90%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name-row"><span class="skill-name">PostgreSQL / MySQL</span><span class="skill-pct">85%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name-row"><span class="skill-name">AI / GenAI Integrations</span><span class="skill-pct">80%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name-row"><span class="skill-name">WordPress</span><span class="skill-pct">78%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:78%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name-row"><span class="skill-name">Docker</span><span class="skill-pct">72%</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:72%"></div></div>
-        </div>
-      </div>
-
-      <!-- TECH STACK -->
-      <div class="section">
-        <div class="section-label">Tech Stack</div>
-        <div class="tag-list">
-          <span class="tag">Ruby on Rails</span>
-          <span class="tag">React.js</span>
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">REST APIs</span>
-          <span class="tag">Git &amp; GitHub</span>
-          <span class="tag">Docker</span>
-          <span class="tag">WordPress</span>
-          <span class="tag">GenAI / LLMs</span>
-          <span class="tag">HTML5</span>
-          <span class="tag">CSS3</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Python</span>
-          <span class="tag">OpenAI API</span>
-        </div>
-      </div>
-
-      <!-- EDUCATION -->
-      <div class="section">
-        <div class="section-label">Education</div>
-        <div>
-          <div class="edu-degree">Bachelor of Engineering</div>
-          <div class="edu-degree" style="font-weight:500; font-size:8pt;">Computer Engineering</div>
-          <div class="edu-school">Kantipur Engineering College</div>
-          <div class="edu-location">Dhapkhel, Lalitpur, Nepal</div>
-        </div>
-      </div>
-
-      <!-- KEY PROJECTS -->
-      <div class="section">
-        <div class="section-label">Key Projects</div>
-        <div style="display:flex; flex-direction:column; gap:8px;">
-          <div class="service-item">
-            <div class="service-name">AI-Powered Job Portal</div>
-            <div class="service-desc">Rails + React · GenAI resume parsing · smart matching</div>
-          </div>
-          <div class="service-item">
-            <div class="service-name">SaaS Admin Dashboard</div>
-            <div class="service-desc">Multi-tenant · RBAC · real-time reporting</div>
-          </div>
-          <div class="service-item">
-            <div class="service-name">E-Commerce Platform</div>
-            <div class="service-desc">WordPress · WooCommerce · payment gateway</div>
-          </div>
-          <div class="service-item">
-            <div class="service-name">GenAI Automation Suite</div>
-            <div class="service-desc">LLM APIs · content workflows · data extraction</div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- /sidebar -->
-  </div><!-- /body -->
-</div>
 </body>
+
 </html>
