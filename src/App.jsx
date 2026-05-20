@@ -38,7 +38,46 @@ const projects = [
   },
 ];
 
-const navLinks = ["About", "Skills", "Work", "Contact"];
+const services = [
+  {
+    title: "Custom Website Development",
+    desc: "Pixel-perfect, responsive websites built from the ground up — tailored to your brand, optimised for performance, and crafted for seamless user experience.",
+    icon: "🌐",
+    accent: "#00FFB2",
+  },
+  {
+    title: "Web Application Development",
+    desc: "Scalable full-stack web applications using Ruby on Rails and React, featuring clean architecture, RESTful APIs, and robust database design.",
+    icon: "⚙️",
+    accent: "#38BDF8",
+  },
+  {
+    title: "AI Integration & Automation",
+    desc: "Embed GenAI and LLM-powered features into your product — intelligent assistants, automated workflows, smart data extraction, and more.",
+    icon: "🤖",
+    accent: "#A855F7",
+  },
+  {
+    title: "Quality Assurance (QA) & Testing",
+    desc: "Comprehensive test coverage with unit, integration, and end-to-end testing strategies to ensure your application ships bug-free and reliable.",
+    icon: "✅",
+    accent: "#FF6B35",
+  },
+  {
+    title: "Feature Enhancement & Application Maintenance",
+    desc: "Evolve and maintain your existing codebase — adding new features, refactoring legacy code, and keeping your application performant and secure.",
+    icon: "🔧",
+    accent: "#F59E0B",
+  },
+  {
+    title: "IT Consulting & Mentorship",
+    desc: "Strategic technology guidance for teams and individuals — architecture reviews, stack decisions, code mentorship, and career coaching for aspiring developers.",
+    icon: "🧭",
+    accent: "#34D399",
+  },
+];
+
+const navLinks = ["About", "Skills", "Services", "Work", "Contact"];
 
 function useInView(threshold = 0.1) {
   const ref = useRef(null);
@@ -150,6 +189,62 @@ function ProjectCard({ project, index }) {
           </span>
         ))}
       </div>
+    </div>
+  );
+}
+
+function ServiceCard({ service, index }) {
+  const [ref, inView] = useInView();
+  const [active, setActive] = useState(false);
+  return (
+    <div
+      ref={ref}
+      onMouseEnter={() => setActive(true)}
+      onMouseLeave={() => setActive(false)}
+      onTouchStart={() => setActive(true)}
+      onTouchEnd={() => setTimeout(() => setActive(false), 500)}
+      style={{
+        background: active ? "#0F172A" : "#0A0F1E",
+        border: `1px solid ${active ? service.accent + "55" : "#1E293B"}`,
+        borderRadius: "16px",
+        padding: "1.8rem 1.6rem",
+        cursor: "default",
+        transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+        transform: inView ? "translateY(0)" : "translateY(40px)",
+        opacity: inView ? 1 : 0,
+        transitionDelay: `${index * 80}ms`,
+        boxShadow: active ? `0 0 40px ${service.accent}18` : "none",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <div style={{
+        position: "absolute", top: 0, left: 0, right: 0, height: "2px",
+        background: `linear-gradient(90deg, transparent, ${service.accent}, transparent)`,
+        opacity: active ? 1 : 0,
+        transition: "opacity 0.4s",
+      }} />
+      <div style={{
+        width: "44px", height: "44px", borderRadius: "12px",
+        background: service.accent + "15",
+        border: `1px solid ${service.accent}30`,
+        display: "flex", alignItems: "center", justifyContent: "center",
+        fontSize: "1.4rem", marginBottom: "1.1rem",
+      }}>
+        {service.icon}
+      </div>
+      <h3 style={{
+        fontFamily: "'Poppins', sans-serif", fontSize: "1rem", fontWeight: 700,
+        color: "#F1F5F9", marginBottom: "0.6rem", letterSpacing: "-0.02em",
+      }}>
+        {service.title}
+      </h3>
+      <p style={{
+        fontFamily: "'Poppins', sans-serif", fontSize: "0.86rem",
+        color: "#64748B", lineHeight: 1.65,
+      }}>
+        {service.desc}
+      </p>
     </div>
   );
 }
@@ -296,6 +391,25 @@ export default function Portfolio() {
           white-space: nowrap;
         }
         .hire-btn:hover { background: #00FFB2; color: #050B18; }
+        .cv-btn {
+          font-family: 'Poppins', sans-serif;
+          font-size: 0.75rem;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          padding: 0.55rem 1.3rem;
+          border-radius: 8px;
+          border: 1px solid #1E293B;
+          color: #94A3B8;
+          background: #0A0F1E;
+          cursor: pointer;
+          transition: all 0.25s;
+          white-space: nowrap;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          text-decoration: none;
+        }
+        .cv-btn:hover { border-color: #38BDF8; color: #38BDF8; background: #38BDF808; }
         .cta-primary {
           font-family: 'Poppins', sans-serif;
           font-size: 0.82rem;
@@ -393,7 +507,19 @@ export default function Portfolio() {
             </div>
           )}
 
-          {!isMobile && <button className="hire-btn" onClick={() => scrollTo("Contact")}>Hire Me</button>}
+          {!isMobile && (
+            <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+              <a className="cv-btn" href="/Ritesh_Chaudhary_CV.pdf" download>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Download CV
+              </a>
+              <button className="hire-btn" onClick={() => scrollTo("Contact")}>Hire Me</button>
+            </div>
+          )}
 
           {isMobile && (
             <button className={`hamburger${menuOpen ? " open" : ""}`} onClick={() => setMenuOpen(o => !o)} aria-label="Toggle menu">
@@ -409,7 +535,15 @@ export default function Portfolio() {
           {navLinks.map(l => (
             <button key={l} className={`mobile-nav-link${activeNav === l ? " active" : ""}`} onClick={() => scrollTo(l)}>{l}</button>
           ))}
-          <div style={{ marginTop: "auto", paddingTop: "2rem" }}>
+          <div style={{ marginTop: "auto", paddingTop: "2rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+            <a className="cv-btn" href="/Ritesh_Chaudhary_CV.pdf" download style={{ justifyContent: "center" }}>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download CV
+            </a>
             <button className="cta-primary" style={{ width: "100%" }} onClick={() => scrollTo("Contact")}>
               Hire Me
             </button>
@@ -529,6 +663,18 @@ export default function Portfolio() {
               padding: "0.32rem 0.7rem", borderRadius: "6px", letterSpacing: "0.03em",
             }}>{t}</span>
           ))}
+        </div>
+      </section>
+
+      {/* ── SERVICES ── */}
+      <section id="services" style={{ padding: `${sectionPy} ${px}`, maxWidth: "1200px", margin: "0 auto", position: "relative", zIndex: 1 }}>
+        <SectionHeader label="WHAT I OFFER" title="My Services" />
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: isMobile ? "1fr" : isTablet ? "repeat(2, 1fr)" : "repeat(3, 1fr)",
+          gap: "1rem", marginTop: "2.5rem",
+        }}>
+          {services.map((s, i) => <ServiceCard key={s.title} service={s} index={i} />)}
         </div>
       </section>
 
